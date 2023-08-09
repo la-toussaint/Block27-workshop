@@ -13,10 +13,7 @@
         try {
           const response = await fetch ("https://fsa-jwt-practice.herokuapp.com/signup", {
           method: 'POST',
-          body: JSON.stringify ({username, password}),
-            
-
-         
+          body: JSON.stringify ({username, password}),        
       }); 
       const result = await response.json()
           console.log(result);
@@ -24,8 +21,8 @@
         } catch (error)  {
         setError(error.message)
         }
-
-        return (
+      }
+  return (
         <>
         <h2>Sign Up!</h2>
         {error && <p>{error}</p>}
@@ -44,10 +41,10 @@
                 onChange={(e) => setPassword(e.target.value)} 
                 />
                 </label>
-                <button>Submit</button>
+                <button type= "submit">Submit</button>
                 </form>
                 </>
   ); 
   }     
-}
+
 
