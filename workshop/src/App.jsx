@@ -1,5 +1,6 @@
-import Authenticate from "./Authenticate.jsx";
-import SignUpForm from "./SignUpForm.jsx";
+import Authenticate from "./authenticate";
+import SignUpForm from "./signupform";
+const [token, setToken] = useState(null);
 export default function App() {
   return (
     <>
