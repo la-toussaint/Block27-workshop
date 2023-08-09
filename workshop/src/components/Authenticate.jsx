@@ -30,5 +30,6 @@ export default function Authenticate({ token }) {
       <button onClick={handleClick} disabled={!token}>Authenticate Token!</button>
     </div>
 
+
   );
 }

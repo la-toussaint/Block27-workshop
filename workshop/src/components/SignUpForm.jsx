@@ -26,21 +26,27 @@
         {error && <p>{error}</p>}
     <form onSubmit={handleSubmit}>
         <label> 
-            Username: {""} 
+            Username: {""} <br/>
             <input 
             value={username} 
             onChange={(e) => setUsername(e.target.value)}
-            />
-            </label>
-            <label>
-                Password: {""}
-                <input type="password" 
-                value={password} 
+            /><br/>
+        </label>
+        <label>
+          Password: {""} <br/>
+          <input type="password" 
+                 value={password} 
                 onChange={(e) => setPassword(e.target.value)} 
-                />
-                </label>
-                <button type= "submit">Submit</button>
+                /> <br/>
+        </label>
+        <br/>
+                <button type= "submit">Submit</button> 
+                
                 </form>
+                { ! (username.length >= 8) && <p style={{color: 'black'}}>
+                  No more than 8 characters 
+                  </p>
+                }
                 </>
   ); 
   }     
