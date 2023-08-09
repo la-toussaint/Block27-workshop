@@ -12,11 +12,11 @@ export default function Authenticate({ token }) {
         headers: {
           "Content-Type" : "application/json",
           Authorization: `Bearer ${token}`,     
-        } 
+        }, 
       }
     ); 
-        const result = await response.json()
-        setSuccessMessage(result.message)
+        const result = await response.json();
+        setSuccessMessage(result.message);
         console.log(result);
     } catch (error) {
       setError(error.message);
@@ -27,7 +27,7 @@ export default function Authenticate({ token }) {
       <h2>Authenticate!</h2>
       {successMessage && <p>{successMessage}</p>}
       {error && <p>{error}</p>}
-      <button onClick={handleClick}>Authenticate Token!</button>
+      <button onClick={handleClick} disabled={!token}>Authenticate Token!</button>
     </div>
 
   );
