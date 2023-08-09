@@ -13,12 +13,11 @@
         try {
           const response = await fetch ("https://fsa-jwt-practice.herokuapp.com/signup", {
           method: 'POST',
-          body: {
-            username,
-            password
+          body: JSON.stringify ({username, password}),
+            
 
-          },
-      }) 
+         
+      }); 
       const result = await response.json()
           console.log(result);
 
